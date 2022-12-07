@@ -84,7 +84,9 @@ unclass(x)
 
 # Reorder and Levels of a factor
 x
-relevel(x, ref="no")
+x <- relevel(x, ref="no")
+
+unclass(x)
 
 ## New and relabeled Levels
 exam <- c(TRUE, TRUE, FALSE, TRUE, FALSE)

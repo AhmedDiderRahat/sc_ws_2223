@@ -1,3 +1,8 @@
+###############################################################################################################
+#   Statistical Computing Exercise-01
+#   Date: 17th Oct 2022
+###############################################################################################################
+
 # Portion 2- Exercise: Expressions or assignments and basic arithmetic
 
 #Calculate the following expressions
@@ -94,11 +99,9 @@ d
 # 3. Assign the first 10 Fibonacci numbers 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 to a vector called fibonacci.
 # In the script window type the following comment above the previous command.
 
-# Not getting any of the function
-
+fibonacci <- c(1, 1, 2, 3, 5, 8, 13, 21, 34, 55)
 
 # ----------------------------------------------------- X ----------------------------------------------------- 
-
 
 # Portion 5- Exercise: R Vector Arithmetic
 
@@ -158,7 +161,6 @@ a + x # = element wise sum of a and x
   
 # ----------------------------------------------------- X ----------------------------------------------------- 
 
-
 # Portion 6- Exercise: Types of vector
 
 myWords <- c("This", "is", "a", "vector", "of", "characters", ".")
@@ -191,6 +193,15 @@ x[1:3] # 1, 3, 4
 x[c(1, 3, 5)] # 1, 4, 9
 
 
+# 3. Extract the two last elements of the fibonacci vector and use them to calculate the eleventh element.
+
+new_fibonacci <- fibonacci[9] + fibonacci[10] 
+
+# 4. Add the eleventh element to the existing fibonacci vector
+fibonacci[11] <- new_fibonacci
+fibonacci
+
+
 # 7.2 Logical subsetting
 
 # 1. Make sure you understand the follwing code and outcome:
@@ -202,3 +213,9 @@ x >= 4 # F F T T T
 x[c(TRUE, FALSE, FALSE, TRUE, TRUE)] # 1, 8, 9
 
 x[x >= 4] # 4, 8, 9
+
+
+# 4. Extract all elements of the fibonacci vector that are smaller than 10 or larger than 20.
+# (Hint: the OR operator | is required for that task.)
+
+fibonacci[fibonacci < 10 | fibonacci > 20]
