@@ -12,9 +12,9 @@ str(flights)
 # Class of the dataset
 class(flights)
 
-# --------------------------------- x ---------------------------------
+# ------------------------------------- x -------------------------------------
 
-# Filter Rows: we can select all flights on    July 1st with:
+# Filter Rows: we can select all flights on july 1st with:
 
 x <- filter(flights, month == 7, day == 1)
 x
@@ -33,7 +33,6 @@ filter(flights, dep_delay < 0  &  arr_delay > 0)
 # To select rows by position, use slice():
 
 slice(flights, 2:5)
-
 
 # Arrange (reorder) rows with arrange()
 # arrange() orders the rows of a data frame by the values of selected columns
@@ -72,7 +71,7 @@ distinct(select(flights, origin, dest))
 # Generate new columns with mutate()
 # As well as selecting from the set of existing columns, it’s often useful to add new columns that are functions of existing columns.
 
-x< - mutate(flights, 
+x <- mutate(flights, 
        gain = arr_delay - dep_delay,
        speed = distance / air_time * 60)
 
@@ -83,26 +82,25 @@ transmute(flights,
           gain = arr_delay - dep_delay,
           speed = distance / air_time * 60)
 
-# Summarise values with summarise()
+# Summarize values with 'summarise()'
 summarise(flights,
           delay = mean(dep_delay, na.rm = TRUE))
 
-# --------------------------------- x ---------------------------------
+# ------------------------------------- x -------------------------------------
 
 # Randomly sample rows
 
 # Took n sample
 sample_n(flights, 10)
 
-# Took spacific portion of data
+# Took specific portion of data
 sample_frac(flights, 0.01)
 
 
 # Grouped Operations
-
 by_tailnum <- group_by(flights, tailnum)
 
-delay <- summarise(by_tailnum, 
+delay <- summarise(by_tailnum,
                    count = n(),
                    dist = mean(distance, na.rm = TRUE), 
                    delay = mean(arr_delay, na.rm = TRUE))
@@ -112,18 +110,19 @@ delay <- filter(delay, count>20, dist <2000)
 delay
 
 # Grouped by operations
-
 destinations <- group_by(flights, dest)
 
-summarise(destinations, 
+summarise(destinations,
           no_of_planes = n_distinct(tailnum),
           no_of_flights = n())
 
-# --------------------------------- x ---------------------------------
+
+# ------------------------------------- x -------------------------------------
 
 # Function Chaining: 
 
 a1 <- group_by(flights, year, month, day)
+
 a2 <- select(a1, arr_delay, dep_delay)
 
 a3 <- summarise(a2, 
@@ -160,4 +159,5 @@ flights %>%
     dep = mean(dep_delay, na.rm = TRUE)
     ) %>%
   filter(arr > 30 | dep > 30)
+
   

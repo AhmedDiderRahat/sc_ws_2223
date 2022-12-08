@@ -9,20 +9,19 @@ df <- data.frame(someNumbers, aChar)
 write.table(df, "Data/someData.txt", append = FALSE, sep = " ", dec = ".", row.names = FALSE, col.names = TRUE)
 
 # set the working directory
-# setwd("/Users/zeotaplaptop/Desktop/my_learning/sc_ws_2223/sc_ws_2223/Course Material")
+setwd("/Users/zeotaplaptop/Desktop/my_learning/sc_ws_2223/sc_ws_2223/Course Material")
 
 # fetch the working directory
-# getwd()
+getwd()
 
 x <- read.table("Data/someData.txt", header = T)
 str(x)
 
 
 # define the class for each variable
-
 x <- read.table("Data/someData.txt")
 
-classes = c(someNumber = "numeric", aChar = "character")
+classes = c(someNumbers = "numeric", aChar = "character")
 
 y <- read.table("Data/someData.txt", header = T,
                 nrows = 100,
