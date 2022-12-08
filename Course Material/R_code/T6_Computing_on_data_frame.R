@@ -159,5 +159,4 @@ flights %>%
     dep = mean(dep_delay, na.rm = TRUE)
     ) %>%
   filter(arr > 30 | dep > 30)
-
   
