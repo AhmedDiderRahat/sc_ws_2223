@@ -18,12 +18,13 @@ y
 x[y]    # print all the element of x, which has a TRUE value in vector y
 
 
-# ---------------------------------- x ----------------------------------
+# -------------------------------------- x --------------------------------------
 
 # subset of DataFrame
 
 x <- data.frame(eggs = 1:4, 
                 ham = c(TRUE, TRUE, FALSE, TRUE))
+
 print(x)  # print the dataframe
 
 print(x$eggs)         # print all the element from column eggs-> with column name
@@ -34,7 +35,6 @@ print(x[, "eggs"])    # print all the element from column eggs-> with column nam
 
 
 # Subsetting data frames with positions
-
 print(x[1])           # print the first column
 
 print(x[[1]])         # print all the elements from first column
@@ -56,6 +56,7 @@ x[c(FALSE, TRUE)]   # by setting a logical vector we can spacify which column ne
 # Subsetting data frames with logicals
 
 # To delete elements in a list you can simply assign the value NULL to them
+# Delete the first column
 x[1] <- NULL
 x
 
@@ -68,7 +69,7 @@ print(x)
 print(x[-(1:2), ])  # Print all rows expect 1 and 2
 
 
-# ---------------------------------- x ----------------------------------
+# -------------------------------------- x --------------------------------------
 
 
 # Removing NA values
@@ -114,3 +115,4 @@ print(x)
 print(x$h)  # will give NULL, because there are two elements start with h
 
 print(x$ha) # will give the elements of ham
+
