@@ -28,4 +28,4 @@ print(x && y) # Logical AND
 # 1: In x && y : 'length(x) = 2 > 1' in coercion to 'logical(1)'
 # 2: In x && y : 'length(x) = 2 > 1' in coercion to 'logical(1)'
 
-# Output is TRUE, but we need to apply logical into two object with length
+# Output is TRUE, but we need to apply logical operator into two object with length
