@@ -1,7 +1,7 @@
-###############################################################################################################
-#   Statistical Computing Exercise-01
-#   Date: 17th Oct 2022
-###############################################################################################################
+################################################################################################################
+#   Statistical Computing Exercise-01                                                                          #
+#   Date: 17th Oct 2022                                                                                        #
+################################################################################################################
 
 # Portion 2- Exercise: Expressions or assignments and basic arithmetic
 
@@ -13,11 +13,11 @@
 # 2. Store the result of 1234 + 2468 to an object named a.
 a <- 1234 + 2468
 
-# 3. Use the arithmetic operators -, *, / and ˆ for the following calculations:
-# a. 87 − 105
+# 3. Use the arithmetic operators -, *, / and ^ for the following calculations:
+# a. 87 - 105
 87 - 105
 
-# b. 32.4 × 18
+# b. 32.4 x 18
 32.4 * 18
 
 # c. 13/8
@@ -31,14 +31,14 @@ a <- 1234 + 2468
 
 # Portion 3- Exercise: Mathematical functions
 
-# 1. √729
+# 1. Square root of 729
 sqrt(729)
 
 # 2. e5
 exp(5)
 
-# 3. ln 2
-log(2, exp(1))
+# 3. ln(2)
+log(10, exp(1))
 
 # 4. ln(e(5))
 log(exp(5), exp(1))
@@ -49,7 +49,7 @@ log(64, 2)
 # 6. log10 1000
 log(1000, 10)
 
-# 7. |− 5|
+# 7. |-5|
 abs(-5)
 
 
@@ -72,25 +72,25 @@ seq(3, 10, 2) # get a sequence from 3 to 10 (including) with 2 interval
 seq(0, 10, 2) # get a sequence from 0 to 10 (including) with 2 interval
 
 
-#1. Define the following vectors in R:
-#  • a = sequence from 0 to 8
+# 1. Define the following vectors in R:
+# a = sequence from 0 to 8
 a <- 0:8
 a
 
-#  • b = (1, 1, 1, 2, 2, 2, 3, 3, 3)
+# b = (1, 1, 1, 2, 2, 2, 3, 3, 3)
 b <- c(1, 1, 1, 2, 2, 2, 3, 3, 3)
 b
 
-#  • c = (1, 2, 2, 3, 3, 3, 4, 4, 4)
+# c = (1, 2, 2, 3, 3, 3, 4, 4, 4)
 c <- c(1, 2, 2, 3, 3, 3, 4, 4, 4)
 c
 
-#  • d = (1, 2, 2, 3, 3, 3, 4, 4, 4)
+# d = (1, 2, 2, 3, 3, 3, 4, 4, 4)
 d <- c(1, 2, 2, 3, 3, 3, 4, 4, 4)
 d
 
 
-# 2. Now read the help for the function rep and redefine vectors b and ‘c
+# 2. Now read the help for the function rep and redefine vectors b and c
 (b <- rep(1:3, each=3))
 
 (c <- rep(1:4, c(1:3, 3)))
@@ -122,7 +122,7 @@ z
 # 2 + y
 2 + y
 
-# xˆ2
+# x^2
 x ^ 2
 
 # sqrt(x)
@@ -193,18 +193,18 @@ x[1:3] # 1, 3, 4
 x[c(1, 3, 5)] # 1, 4, 9
 
 
-# 3. Extract the two last elements of the fibonacci vector and use them to calculate the eleventh element.
+# 3. Extract the two last elements of the Fibonacci vector and use them to calculate the eleventh element.
 
 new_fibonacci <- fibonacci[9] + fibonacci[10] 
 
-# 4. Add the eleventh element to the existing fibonacci vector
+# 4. Add the eleventh element to the existing Fibonacci vector
 fibonacci[11] <- new_fibonacci
 fibonacci
 
 
-# 7.2 Logical subsetting
+# 7.2 Logical sub-setting
 
-# 1. Make sure you understand the follwing code and outcome:
+# 1. Make sure you understand the following code and outcome:
 
 x <- c(1, 3, 4, 8, 9)
 x >= 4 # F F T T T
@@ -215,7 +215,7 @@ x[c(TRUE, FALSE, FALSE, TRUE, TRUE)] # 1, 8, 9
 x[x >= 4] # 4, 8, 9
 
 
-# 4. Extract all elements of the fibonacci vector that are smaller than 10 or larger than 20.
+# 4. Extract all elements of the Fibonacci vector that are smaller than 10 or larger than 20.
 # (Hint: the OR operator | is required for that task.)
 
 fibonacci[fibonacci < 10 | fibonacci > 20]
