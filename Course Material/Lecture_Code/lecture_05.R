@@ -38,3 +38,6 @@ cor(x, y, method = 'spearman')
 rank(x)
 
 cor(rank(x), rank(y))
+
+
+# jlLRcH5loIpOqZUr5LiUlom0Aexvz4sa3YdL+Stg9CY
