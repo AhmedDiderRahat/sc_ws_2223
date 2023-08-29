@@ -1,5 +1,7 @@
-# Paste: Convert any arguments to a character and concatenates them
+# Preparations
+rm(list = ls(all.names = TRUE))
 
+# Paste: Convert any arguments to a character and concatenates them
 x <- "Some"
 paste(x, "String")
 
@@ -33,14 +35,13 @@ print(newLine)
 
 cat(newLine)
 
-
 moreNewLines <- paste(rep('new', 3), 'line', sep = '\n')
 moreNewLines
 
 
 # ------------------------------------- x -------------------------------------
 
-# Grep: Find patterens inside of characters
+# Grep: Find patterns inside of characters
 
 print(a)
 
@@ -51,11 +52,16 @@ c1 <- "Some_String More_String dider rahat_String"
 c1 <- strsplit(c1, ' ')
 c1[[1]]
 
+c1
+
 grep('String', c1[[1]])
 
 
 # if the string is not in the given list
 grep('Rahat', a)
+
+grep('Rahat', c1)
+grep('rahat', c1[[1]])
 
 # get logical output
 grepl('Some', a)
